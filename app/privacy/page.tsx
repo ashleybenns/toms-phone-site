@@ -109,7 +109,7 @@ export default function PrivacyPage() {
 
           <h2 style={h2}>2. Information we collect</h2>
           <p>
-            <strong>On your device.</strong> The app processes data needed for features you
+            <strong>XXXX On your device.</strong> The app processes data needed for features you
             use—for example contacts, call handling, photos you take in the app, and settings.
             This stays on the device unless you explicitly contact us (e.g. email support) or
             use a feature that sends information to our servers.
