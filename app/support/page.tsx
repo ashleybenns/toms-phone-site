@@ -35,7 +35,7 @@ const FAQS = [
   },
   {
     q: "I have forgotten the helper PIN.",
-    a: "The only way past it is to reset the app, which clears everything and starts again at first-launch. That is why the backup exists: take one from the helper settings when you finish setting up, keep the file somewhere safe, and a forgotten PIN costs you five minutes instead of an evening.",
+    a: "The only way past it is to reset the app, which clears everything and starts again at first-launch. That is why the backup exists: export your settings from Admin when you finish setting up, keep the file somewhere safe, and a forgotten PIN costs you five minutes instead of an evening. The PIN never blocks the emergency medical information — an ambulance crew can always see that.",
   },
   {
     q: "Can I try it on my own phone first?",
@@ -49,6 +49,38 @@ const FAQS = [
     q: "What happens to my information?",
     a: "It stays on the phone. Contacts, settings, and medical information are never uploaded, and the app never reads the phone's own address book. The only thing that ever leaves is an optional crash report, over Wi-Fi only. The full detail is in the privacy policy.",
   },
+];
+
+/**
+ * The eight helper-settings sections, with the app's OWN summaries copied verbatim from
+ * app/src/main/res/values/strings.xml (settings_section_*_summary) in the TP_June26 repo.
+ *
+ * Kept word-for-word on purpose. A helper reads this with the phone in the other hand, so a
+ * paraphrase that drifts is worse than no list at all — and this page has already drifted from the
+ * app once, by describing the settings gesture without the way back in when it is forgotten.
+ * If these stop matching, the app is right and this is wrong.
+ */
+const SECTIONS: [string, string][] = [
+  ["Start here", "Name, making this the Home and Phone app, and allowing calls."],
+  [
+    "Device setup",
+    "Wi-Fi, screen lock, brightness and timeout — set on the phone itself, best done first.",
+  ],
+  [
+    "People & buttons",
+    "Contacts, and which of them get a button on the home screen.",
+  ],
+  ["Safety", "SOS emergency button, medical information, and battery alerts."],
+  [
+    "Calls & voicemail",
+    "How calls sound and behave, voicemail, and recent calls.",
+  ],
+  [
+    "Screen & touch",
+    "Text size, colours, screen power, margins, and the tap test.",
+  ],
+  ["Admin", "Helper PIN, backing up, and stopping Tom's Phone."],
+  ["About & help", "Website, feedback, privacy policy, and subscription."],
 ];
 
 const STEPS = [
@@ -78,7 +110,7 @@ const STEPS = [
   },
   {
     title: "Take a backup, then hand it over",
-    body: "Export your settings from the helper area and keep the file. It is the difference between a lost phone being annoying and being an evening's work.",
+    body: "Under Admin, export your settings and keep the file somewhere safe. It is the difference between a lost phone, or a forgotten PIN, being annoying and being an evening's work.",
   },
 ];
 
@@ -130,12 +162,63 @@ export default function SupportPage() {
           Not a tap, not a long press — a deliberate sideways slide across the
           status text.
         </p>
-        <p className="mb-0 text-muted">
-          It is hidden this way on purpose. It had to be something a senior
-          would never do by accident but a helper could do one-handed while
-          holding a cup of tea, without adding a button to a screen whose whole
-          value is having very few of them.
+        <p className="text-muted">
+          There is no icon, on purpose, so it cannot be opened by accident —
+          which does mean anyone else who looks after this phone needs telling.
         </p>
+
+        <div className="mt-5 rounded-2xl bg-wash p-5">
+          <h3 className="mt-0 mb-2 font-bold">
+            If the gesture is forgotten, or does not work
+          </h3>
+          <p className="m-0 text-muted">
+            You can always get back in from the phone&apos;s own settings, and
+            you do not need Tom&apos;s Phone to co-operate:
+          </p>
+          <ol className="mt-3 mb-0 list-decimal pl-5 text-muted">
+            <li>
+              Swipe down from the very top of the screen and open the
+              phone&apos;s own settings.
+            </li>
+            <li>
+              Go to <strong>Apps</strong> ▸ <strong>Default apps</strong>.
+            </li>
+            <li>
+              Set the <strong>Home app</strong> back to the phone&apos;s usual
+              one.
+            </li>
+          </ol>
+          <p className="mt-3 mb-0 text-muted">
+            Tom&apos;s Phone then appears in the app list like any other app, and
+            opening it from there takes you straight to the helper settings.
+            Nothing is lost — your contacts and setup are exactly as you left
+            them, and you can set it back as the Home app when you are done.
+          </p>
+        </div>
+
+        <p className="mt-5 mb-0 text-muted">
+          This page exists partly for that last bit. The instructions are also
+          inside the app, under <strong>About &amp; help</strong> — but they are
+          no use to someone who cannot get in to read them, so they need to live
+          somewhere reachable from any browser.
+        </p>
+      </Card>
+
+      <Card>
+        <H2>What is where</H2>
+        <p className="text-muted">
+          The helper settings are one page of sections. These descriptions are
+          the app&apos;s own, so what you read here is what you will see on the
+          phone.
+        </p>
+        <dl className="m-0">
+          {SECTIONS.map(([name, summary]) => (
+            <div key={name} className="mb-3 last:mb-0">
+              <dt className="font-bold">{name}</dt>
+              <dd className="mt-0.5 mb-0 ml-0 text-muted">{summary}</dd>
+            </div>
+          ))}
+        </dl>
       </Card>
 
       <Card>
@@ -144,15 +227,20 @@ export default function SupportPage() {
           <dt className="font-bold">The home screen has gone back to normal</dt>
           <dd className="mt-1 mb-4 ml-0 text-muted">
             Something has taken the Home role back — usually a system update, or
-            a tap on &ldquo;always&rdquo; against another launcher. Open Tom&apos;s
-            Phone from the app list; it will notice and offer to fix it.
+            a tap on &ldquo;always&rdquo; against another launcher. Open
+            Tom&apos;s Phone from the app list, go to <strong>Start here</strong>
+            , and use <strong>Set as Home app</strong>. The settings hub will
+            already be showing{" "}
+            <em>&ldquo;Not set as the Home app yet&rdquo;</em> so you can see at
+            a glance that this is what happened.
           </dd>
 
           <dt className="font-bold">Calls do not use the big call screen</dt>
           <dd className="mt-1 mb-4 ml-0 text-muted">
-            The Phone role has been lost in the same way. The app re-checks when
-            you come back from Android settings, so put it back and reopen the
-            app.
+            The Phone role has been lost in the same way. Same place —{" "}
+            <strong>Start here</strong>, then <strong>Set as Phone app</strong>.
+            The hub shows <em>&ldquo;Not set as the Phone app yet&rdquo;</em>{" "}
+            while it is missing.
           </dd>
 
           <dt className="font-bold">
@@ -173,11 +261,13 @@ export default function SupportPage() {
 
           <dt className="font-bold">I want to stop using it</dt>
           <dd className="m-0 ml-0 text-muted">
-            <strong>Exit app</strong> in the helper settings takes you to the
-            Android screen for choosing your home screen and dialler. Set them
-            back to the phone&apos;s own, and Tom&apos;s Phone is an ordinary app
-            again. <strong>Reset Tom&apos;s Phone</strong> erases everything it
-            has stored. Neither is behind the paywall.
+            Both live under <strong>Admin</strong>. <strong>Exit app</strong>{" "}
+            takes you to the Android screen for choosing your home screen and
+            dialler — set them back to the phone&apos;s own and Tom&apos;s Phone
+            is an ordinary app again, still installed, nothing deleted.{" "}
+            <strong>Reset Tom&apos;s Phone</strong> erases everything it has
+            stored. Neither is behind the paywall, and neither is backing up or
+            restoring your settings.
           </dd>
         </dl>
       </Card>
