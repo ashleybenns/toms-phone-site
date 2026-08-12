@@ -64,7 +64,7 @@ const SECTIONS: [string, string][] = [
   ["Start here", "Name, making this the Home and Phone app, and allowing calls."],
   [
     "Device setup",
-    "Wi-Fi, screen lock, brightness and timeout — set on the phone itself, best done first.",
+    "Wi-Fi, screen lock, brightness and timeout — set on the phone itself, and easier before Tom's Phone becomes the Home app.",
   ],
   [
     "People & buttons",
