@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Tom's Phone brand tokens.
+
+  The palette is the app's: purple on a warm off-white. Deliberately committed to a single
+  light theme rather than following the visitor's dark preference — the audience is a helper
+  comparing this page against a phone in their other hand, often on an unfamiliar device, and
+  one predictable appearance is worth more here than matching their OS. (The previous
+  create-next-app dark block was doing nothing anyway: every page hardcoded a light background
+  over the top of it, so the two only ever disagreed.)
+*/
+@theme {
+  --color-brand: #9824bc;
+  --color-brand-dark: #7a1c97;
+  --color-ink: #1f1630;
+  --color-muted: #5c516c;
+  --color-surface: #faf7fc;
+  --color-card: #ffffff;
+  --color-line: #e8def0;
+  --color-wash: #f5ecfa;
+
+  --font-sans: var(--font-geist-sans), Inter, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/*
+  The site describes an accessibility app, so it has to clear the bar it talks about:
+  a visible focus ring on every interactive element, and text that reflows rather than
+  truncates. Anything that fails here undermines the product's own claim.
+*/
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
