@@ -50,7 +50,7 @@ const PERMISSIONS = [
   ],
   [
     "Internet & network state",
-    "Crash reports only, and to tell Wi-Fi from mobile data so they are held back.",
+    "Crash reports only, and to tell a metered connection from an unmetered one so they are held back.",
   ],
 ];
 
@@ -74,7 +74,8 @@ export default function PrivacyPage() {
             <strong>In short:</strong> everything the app stores stays on the
             phone. There is no advertising, no analytics, no account, and
             nothing is sold or shared. The only thing that reaches us is a crash
-            report, over Wi-Fi, which you can turn off. The only thing that
+            report, only ever on a connection that does not charge for data,
+            which you can turn off. The only thing that
             reaches anyone else is a battery or SOS text, to contacts you choose.
           </p>
         </div>
@@ -175,11 +176,13 @@ export default function PrivacyPage() {
           </li>
           <li>
             <strong>
-              Reports are sent over Wi-Fi only, never over mobile data.
+              Reports are only sent on a connection that does not charge for
+              data — normally your Wi-Fi.
             </strong>{" "}
-            If the phone is on mobile data the report waits until it next has
-            Wi-Fi. This matters because many of these phones are pay-as-you-go,
-            where using up data credit can stop calls and texts working.
+            Anything metered makes the report wait, including mobile data, a
+            phone hotspot, and a Wi-Fi network you have marked as metered. This
+            matters because many of these phones are pay-as-you-go, where using
+            up data credit can stop calls and texts working.
           </li>
           <li>
             A report contains what went wrong and what type of phone it is.{" "}
