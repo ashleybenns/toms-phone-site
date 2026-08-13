@@ -19,7 +19,7 @@ export const metadata: Metadata = {
  * change. Do not edit this page to describe a behaviour the app does not have.
  */
 
-const EFFECTIVE_DATE = "12 August 2026";
+const EFFECTIVE_DATE = "13 August 2026";
 
 const PERMISSIONS = [
   ["Phone / place calls", "To make a call when a button is pressed."],
