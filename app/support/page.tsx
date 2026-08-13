@@ -19,27 +19,27 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "Can they still get out of it and into the normal phone?",
-    a: "Not by accident, which is the point. Tom's Phone becomes the home screen, so pressing Home comes back to it. Getting to the helper settings needs a deliberate sideways slide across the words at the top — not something a wandering finger finds. You can add a PIN on top of that if they are the exploring sort.",
+    a: "Not by accident, which is the point. Tom's Phone becomes the home screen, so pressing Home comes back to it. Getting to the helper settings needs a long, deliberate sideways slide along the top line — not something a wandering finger finds. You can add a PIN on top of that if they are the exploring sort.",
   },
   {
     q: "What happens when somebody rings who is not in the contacts?",
-    a: "By default it rings as normal and shows as “Unknown” rather than a number they cannot place. If nuisance calls are the problem, there is a setting that lets only saved contacts ring — everything else is silently blocked before it disturbs them. Add the doctor and the pharmacy as contacts first.",
+    a: "By default it rings as normal and shows as “Unknown” rather than a number they cannot place. If nuisance calls are the problem, there is a setting that lets only saved contacts ring — everything else is silently blocked before it disturbs them. Add the doctor and the pharmacy as contacts first. An incoming emergency number is never blocked, and blocking pauses itself for 48 hours after an emergency call, so the ambulance service or the surgery can always ring back.",
   },
   {
     q: "Does the SOS button call 999 straight away?",
-    a: "Only if you set it to. It always asks for confirmation first so it cannot fire in a pocket, and you choose what it dials — 999, your own mobile, a neighbour, or the surgery. It can also text the people you pick to tell them it happened. There is a test mode so you can try the whole thing without calling anyone real.",
+    a: "Only if you set it to. It always asks for confirmation first so it cannot fire in a pocket, and you choose what it dials — 999, your own mobile, a neighbour, or the surgery. It can also text the people you pick to tell them it happened. There is a test mode so you can try the whole thing without calling anyone real — it does still send those texts, clearly marked as a test, so warn whoever is on the list first.",
   },
   {
     q: "Will I know if something is wrong?",
-    a: "You can be texted when the battery is low and again when it is back on charge — the most common reason a phone quietly stops working. If you have a button on their home screen, you also get told about missed calls to you, and the phone keeps reminding them until you have actually spoken.",
+    a: "You can be texted when the battery is low and again when it is back on charge — the most common reason a phone quietly stops working. Missed calls are not texted to you. What happens instead is at their end: if you have a button on their home screen, their phone keeps reminding them about your missed call until the two of you have actually spoken.",
   },
   {
     q: "I have forgotten the helper PIN.",
-    a: "The only way past it is to reset the app, which clears everything and starts again at first-launch. That is why the backup exists: export your settings from Admin when you finish setting up, keep the file somewhere safe, and a forgotten PIN costs you five minutes instead of an evening. The PIN never blocks the emergency medical information — an ambulance crew can always see that.",
+    a: "The PIN prompt has a “Forgot PIN?” button, and it goes to the one way past a forgotten PIN: resetting the app, which clears everything and starts again at first-launch. That is why the backup exists — export your settings from Admin when you finish setting up, keep the file somewhere safe, and a forgotten PIN costs you five minutes instead of an evening. The backup does not carry the medical information, so keep that written down as well. The PIN never blocks the emergency medical information itself.",
   },
   {
     q: "Can I try it on my own phone first?",
-    a: "Yes, and it is a good idea. Install it, set it as the Home and Phone app, and use it for an afternoon. When you are done, the Exit app button in the helper settings takes you to the Android screen where you set your normal home screen and dialler back.",
+    a: "Yes, and it is a good idea. Install it, set it as the Home and Phone app, and use it for an afternoon. When you are done, the Exit app button in the helper settings takes you to the Android settings for choosing your home screen and dialler, and you set them back to your usual ones. One thing to know before you pay: a purchase belongs to a Google account rather than to a handset, so buy it on the phone they will actually use, with whatever account that phone is signed in to.",
   },
   {
     q: "Does it work on an iPhone?",
@@ -47,7 +47,7 @@ const FAQS = [
   },
   {
     q: "What happens to my information?",
-    a: "It stays on the phone. Contacts, settings, and medical information are never uploaded, and the app never reads the phone's own address book. The only thing that ever leaves is an optional crash report, over Wi-Fi only. The full detail is in the privacy policy.",
+    a: "It stays on the phone. Contacts, settings, and medical information are never uploaded, and the app never reads the phone's own address book. The only thing that reaches us is a crash report, over Wi-Fi only, and you can turn that off. The only thing that reaches anybody else is a battery or SOS text, to the contacts you choose. The full detail is in the privacy policy.",
   },
 ];
 
@@ -89,12 +89,12 @@ const STEPS = [
     body: "Get Tom's Phone from Google Play on the phone the senior will use. It opens into a short setup rather than straight into the finished screen.",
   },
   {
-    title: "Let it be the Home and Phone app",
-    body: "Android will ask twice — once to be the home screen, once to be the dialler. Both matter: the first is what stops them getting lost, the second is what lets calls use the big, simple call screen. Without them the app still runs, but it is just another app.",
+    title: "Put their name in",
+    body: "Setup asks for this first. The top of the screen then reads “[Name]'s Phone” when nothing else is happening, which is quietly reassuring on a phone that is not theirs by habit yet.",
   },
   {
-    title: "Put their name in",
-    body: "The top of the screen reads “[Name]'s Phone” when nothing else is happening, which is quietly reassuring on a phone that is not theirs by habit yet.",
+    title: "Let it be the Home and Phone app",
+    body: "Setup offers the home screen. The dialler comes afterwards, under Start here — Set as Phone app, along with allowing calls. Both matter: the first is what stops them getting lost, the second is what lets calls use the big, simple call screen. Without them the app still runs, but it is just another app.",
   },
   {
     title: "Add the people who matter",
@@ -106,11 +106,11 @@ const STEPS = [
   },
   {
     title: "Fill in the medical information",
-    body: "Allergies, medications, conditions, and who to contact. Ambulance crews look for this, and it can be seen in an emergency without knowing any PIN.",
+    body: "Allergies, medications, conditions, and who to contact. It opens without a PIN from the SOS and call screens. Fill in the phone's own emergency information as well, in the phone's settings under Safety and emergency — that is the one ambulance crews are trained to look for.",
   },
   {
     title: "Take a backup, then hand it over",
-    body: "Under Admin, export your settings and keep the file somewhere safe. It is the difference between a lost phone, or a forgotten PIN, being annoying and being an evening's work.",
+    body: "Under Admin, export your settings and keep the file somewhere safe. It is the difference between a lost phone, or a forgotten PIN, being annoying and being an evening's work. It does not include the medical information, which never leaves the phone, so keep that written down too — and restoring a backup puts SOS back into TEST, so set it live again afterwards.",
   },
 ];
 
@@ -156,11 +156,12 @@ export default function SupportPage() {
         <H2>Getting back into the helper settings</H2>
         <p>
           <strong>
-            Slide a finger sideways across the words at the very top of the home
-            screen.
+            Slide a finger sideways along the top line of the home screen — the
+            line with their name on.
           </strong>{" "}
-          Not a tap, not a long press — a deliberate sideways slide across the
-          status text.
+          Not a tap, not a long press: a long, deliberate slide, most of the
+          width of the screen. A short flick will not do it, and it has to be
+          that top line rather than the ones below it.
         </p>
         <p className="text-muted">
           There is no icon, on purpose, so it cannot be opened by accident —
@@ -172,8 +173,9 @@ export default function SupportPage() {
             If the gesture is forgotten, or does not work
           </h3>
           <p className="m-0 text-muted">
-            You can always get back in from the phone&apos;s own settings, and
-            you do not need Tom&apos;s Phone to co-operate:
+            You are never locked out. Hand the home screen back to the
+            phone&apos;s own launcher first — this needs nothing from Tom&apos;s
+            Phone, so it works even when the slide will not:
           </p>
           <ol className="mt-3 mb-0 list-decimal pl-5 text-muted">
             <li>
@@ -189,10 +191,12 @@ export default function SupportPage() {
             </li>
           </ol>
           <p className="mt-3 mb-0 text-muted">
-            Tom&apos;s Phone then appears in the app list like any other app, and
-            opening it from there takes you straight to the helper settings.
-            Nothing is lost — your contacts and setup are exactly as you left
-            them, and you can set it back as the Home app when you are done.
+            The phone now behaves like an ordinary phone again, and Tom&apos;s
+            Phone appears in the app list like any other app. Open it from there
+            and try the slide once more, unhurried, with no risk of the senior
+            watching over your shoulder. Nothing is lost — your contacts and
+            setup are exactly as you left them, and you can set it back as the
+            Home app when you are done.
           </p>
         </div>
 
@@ -228,8 +232,9 @@ export default function SupportPage() {
           <dd className="mt-1 mb-4 ml-0 text-muted">
             Something has taken the Home role back — usually a system update, or
             a tap on &ldquo;always&rdquo; against another launcher. Open
-            Tom&apos;s Phone from the app list, go to <strong>Start here</strong>
-            , and use <strong>Set as Home app</strong>. The settings hub will
+            Tom&apos;s Phone from the app list, slide along the top line to reach
+            the settings, then go to <strong>Start here</strong> and use{" "}
+            <strong>Set as Home app</strong>. The first settings screen will
             already be showing{" "}
             <em>&ldquo;Not set as the Home app yet&rdquo;</em> so you can see at
             a glance that this is what happened.
@@ -239,8 +244,9 @@ export default function SupportPage() {
           <dd className="mt-1 mb-4 ml-0 text-muted">
             The Phone role has been lost in the same way. Same place —{" "}
             <strong>Start here</strong>, then <strong>Set as Phone app</strong>.
-            The hub shows <em>&ldquo;Not set as the Phone app yet&rdquo;</em>{" "}
-            while it is missing.
+            The first settings screen shows{" "}
+            <em>&ldquo;Not set as the Phone app yet&rdquo;</em> while it is
+            missing.
           </dd>
 
           <dt className="font-bold">
@@ -261,10 +267,11 @@ export default function SupportPage() {
 
           <dt className="font-bold">I want to stop using it</dt>
           <dd className="m-0 ml-0 text-muted">
-            Both live under <strong>Admin</strong>. <strong>Exit app</strong>{" "}
-            takes you to the Android screen for choosing your home screen and
-            dialler — set them back to the phone&apos;s own and Tom&apos;s Phone
-            is an ordinary app again, still installed, nothing deleted.{" "}
+            <strong>Exit app</strong> and <strong>Reset Tom&apos;s Phone</strong>{" "}
+            both live under <strong>Admin</strong>. Exit app takes you to the
+            Android settings for choosing your home screen and dialler — set them
+            back to the phone&apos;s own and Tom&apos;s Phone is an ordinary app
+            again, still installed, nothing deleted.{" "}
             <strong>Reset Tom&apos;s Phone</strong> erases everything it has
             stored. Neither is behind the paywall, and neither is backing up or
             restoring your settings.

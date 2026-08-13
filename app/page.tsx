@@ -20,15 +20,15 @@ const FEATURES = [
   },
   {
     title: "Missed calls that get returned",
-    body: "A missed call shows as a name, not a number, and stays until it has been dealt with. If you are the one who was missed, the phone can keep gently reminding until you and they have actually spoken.",
+    body: "A missed call shows as a name, not a number, and stays until it has been dealt with. If the missed call was yours, and you have a button on their home screen, their phone can keep gently reminding them until the two of you have actually spoken.",
   },
   {
     title: "Nowhere to get lost",
-    body: "Tom's Phone becomes the phone's home screen, so pressing Home always comes back here. Settings, notifications and the other apps stay out of reach — not hidden as a trick, just not in the way.",
+    body: "Tom's Phone becomes the phone's home screen, so pressing Home always comes back here. The app drawer and the other apps are out of the way — not hidden as a trick, just not in the way. The notification shade still pulls down, which is how you reach the phone's own settings.",
   },
   {
     title: "Emergency medical information",
-    body: "Allergies, medications, conditions and who to contact, kept on the phone for ambulance crews to find without needing a PIN. It never leaves the phone.",
+    body: "Allergies, medications, conditions and who to contact, held on the phone and openable without a PIN from the SOS and call screens. Set up the phone's own emergency information as well — that is where ambulance crews look first. It never leaves the phone.",
   },
   {
     title: "Set up by you, not by them",
@@ -96,7 +96,13 @@ export default function HomePage() {
         <p>
           Free to try for a month, with everything working. After that it is{" "}
           <strong>£1 a month</strong>, or <strong>£20 once</strong> if you would
-          rather not think about it again.
+          rather not think about it again. It can only be bought in the UK at the
+          moment; elsewhere the settings simply stay unlocked.
+        </p>
+        <p>
+          Buy it on the phone they will actually use, signed in to whatever
+          Google account that phone uses — a purchase belongs to an account
+          rather than to a handset.
         </p>
         <p className="mb-0 rounded-2xl bg-wash p-5">
           <strong>The phone never stops working if you stop paying.</strong>{" "}

@@ -46,7 +46,7 @@ const PERMISSIONS = [
   ["Vibrate", "Feedback when a button is pressed."],
   [
     "Foreground service",
-    "To keep a missed-call reminder running until it is answered.",
+    "To keep a missed-call reminder running until the call has been returned.",
   ],
   [
     "Internet & network state",
@@ -73,8 +73,9 @@ export default function PrivacyPage() {
           <p className="m-0">
             <strong>In short:</strong> everything the app stores stays on the
             phone. There is no advertising, no analytics, no account, and
-            nothing is sold or shared. The only thing that ever leaves the phone
-            is an optional crash report, and only over Wi-Fi.
+            nothing is sold or shared. The only thing that reaches us is a crash
+            report, over Wi-Fi, which you can turn off. The only thing that
+            reaches anyone else is a battery or SOS text, to contacts you choose.
           </p>
         </div>
 
@@ -129,8 +130,9 @@ export default function PrivacyPage() {
         <p>
           The app <strong>does not have camera permission</strong>. When the
           helper chooses to add a photo, the phone&apos;s own camera app opens
-          and writes the picture to a temporary file the app owns. The app then
-          shrinks it and keeps it in its private storage.
+          and writes the picture to a temporary file the app owns — or they pick
+          a photo the phone already has. The app then shrinks it and keeps it in
+          its private storage.
         </p>
         <p>
           <strong>The photograph never leaves the phone.</strong> It is not
@@ -168,8 +170,8 @@ export default function PrivacyPage() {
         </p>
         <ul className="list-disc pl-5">
           <li>
-            <strong>It can be turned off</strong> — Settings → About &amp; help →
-            Crash reports.
+            <strong>It is on to start with, and can be turned off</strong> —
+            Settings → About &amp; help → Crash reports.
           </li>
           <li>
             <strong>
