@@ -47,7 +47,7 @@ const FAQS = [
   },
   {
     q: "What happens to my information?",
-    a: "It stays on the phone. Contacts, settings, and medical information are never uploaded, and the app never reads the phone's own address book. The only thing that reaches us is a crash report, over Wi-Fi only, and you can turn that off. The only thing that reaches anybody else is a battery or SOS text, to the contacts you choose. The full detail is in the privacy policy.",
+    a: "It stays on the phone. Contacts, settings, and medical information are never uploaded, and the app never reads the phone's own address book. The only thing that reaches us is a crash report, sent only on a connection that doesn't charge for data — normally Wi-Fi — and you can turn that off. The only thing that reaches anybody else is a battery or SOS text, to the contacts you choose. The full detail is in the privacy policy.",
   },
 ];
 
