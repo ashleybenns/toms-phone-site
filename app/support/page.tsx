@@ -152,6 +152,122 @@ export default function SupportPage() {
         </ol>
       </Card>
 
+      <Card className="scroll-mt-6">
+        <div id="preparing-the-phone">
+          <H2>Preparing the phone</H2>
+          <p className="text-muted">
+            This comes before setting it up, and it is the part people skip. An
+            afternoon here saves a fortnight of small problems that look like
+            the app&apos;s fault and are not.
+          </p>
+
+          <h3 className="mt-5 mb-2 font-bold">If the phone is second-hand</h3>
+          <p className="text-muted">
+            A spare phone from a drawer is a perfectly good choice — this does
+            not need a new one. But go through it properly first.
+          </p>
+          <ul className="mt-3 mb-0 list-disc pl-5 text-muted">
+            <li>
+              <strong>
+                Sign the previous owner&apos;s Google account out before you
+                reset it, not after.
+              </strong>{" "}
+              A phone reset while somebody is still signed in locks itself to
+              that account on the way back up, and it will ask for a password
+              nobody in the room has. This is the single thing most likely to
+              cost you the evening. The only way past it afterwards is the
+              previous owner&apos;s password — so do it while you can still
+              easily ask. On a Samsung, sign out of the Samsung account too; it
+              has a lock of its own.
+            </li>
+            <li>
+              Then factory reset it, so none of the last owner&apos;s photos,
+              messages or accounts are sitting behind a home screen they may
+              well go exploring on.
+            </li>
+            <li>
+              Check it is not locked to a network you are not using. Phones sold
+              in the UK since the end of 2021 are unlocked; older contract
+              phones often are not.
+            </li>
+            <li>
+              Check how old it is. Tom&apos;s Phone needs Android 9 or newer, but
+              a phone that stopped getting security updates years ago is a phone
+              holding contacts and medical notes with no way to fix a problem
+              found later — so newer is better where you have the choice.
+            </li>
+            <li>
+              Look at the battery. This phone will sit on a charger nearly all
+              the time, and a tired battery in a warm charging stand is the part
+              that gives out first.
+            </li>
+          </ul>
+
+          <h3 className="mt-6 mb-2 font-bold">Before you hand it over</h3>
+          <ul className="mt-3 mb-0 list-disc pl-5 text-muted">
+            <li>
+              <strong>Set the screen lock to None</strong> — not even Swipe. The
+              phone is meant to be usable the instant it is picked up, and there
+              is a specific reason beyond convenience: with any lock set, the
+              lock screen reappears in front of the home screen when a call ends
+              or the screen wakes. The senior has to get past it before they can
+              do anything. With no lock there is nothing in the way. That is a
+              fair trade on a dedicated phone with nothing private on it, which
+              is the only phone this is meant for. Tom&apos;s Phone advises this
+              but never changes it for you.
+            </li>
+            <li>
+              Put a SIM in. It needs calls <em>and texts</em> — the battery and
+              SOS alerts go out as texts — but mobile data is optional; the app
+              works without it, though you will want Wi-Fi at home for updates.
+            </li>
+            <li>
+              Set the brightness and screen timeout to suit the room the phone
+              will actually live in.
+            </li>
+          </ul>
+
+          <h3 className="mt-6 mb-2 font-bold">Keeping it charged</h3>
+          <p className="text-muted">
+            A dedicated phone lives differently from a personal one. It is not
+            in a pocket being noticed all day, so a flat battery can go unspotted
+            for hours — and a flat phone is a phone nobody can reach.
+          </p>
+          <ul className="mt-3 mb-0 list-disc pl-5 text-muted">
+            <li>
+              Put the stand beside the chair they actually sit in, not where it
+              looks tidiest. The phone needs to be within reach of the person,
+              not of the socket.
+            </li>
+            <li>
+              A charging stand they can drop the phone onto beats a cable they
+              have to line up.
+            </li>
+            <li>
+              By default the screen stays on while the phone is charging, which
+              is what you want on a stand — and is another reason to leave it
+              plugged in rather than treat the charger as an overnight thing.
+            </li>
+            <li>
+              Turn on the low-battery text, so you hear about it rather than
+              finding out when a call does not connect. It is set per person:
+              open your own contact under <strong>People &amp; buttons</strong>{" "}
+              and switch on <em>Send battery alerts to this contact</em>.{" "}
+              <strong>Safety</strong> then has a test button to check it arrives.
+            </li>
+            <li>
+              Save their number in your own phone, and let it through Do Not
+              Disturb. A battery or SOS text that arrives silently at 3am is the
+              same as no text at all.
+            </li>
+            <li>
+              Keep a second charger at your own house. The phone will come to you
+              at some point.
+            </li>
+          </ul>
+        </div>
+      </Card>
+
       <Card>
         <H2>Getting back into the helper settings</H2>
         <p>
