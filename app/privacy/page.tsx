@@ -19,7 +19,7 @@ export const metadata: Metadata = {
  * change. Do not edit this page to describe a behaviour the app does not have.
  */
 
-const EFFECTIVE_DATE = "13 August 2026";
+const EFFECTIVE_DATE = "4 November 2026";
 
 const PERMISSIONS = [
   ["Phone / place calls", "To make a call when a button is pressed."],
@@ -157,9 +157,10 @@ export default function PrivacyPage() {
             and it <strong>cannot read any text messages</strong>.
           </li>
           <li>
-            <strong>Emergency calls.</strong> The SOS button calls the number the
-            helper configured. We are not involved in that call and receive
-            nothing about it.
+            <strong>Emergency calls.</strong> The SOS button calls the emergency
+            services — the regional emergency number, or one the helper entered
+            because the SIM supplies none. We are not involved in that call and
+            receive nothing about it.
           </li>
         </ul>
 
@@ -286,7 +287,7 @@ export default function PrivacyPage() {
         <H2>12. Changes to this policy</H2>
         <p>
           If this policy changes we will update this page and its effective date.
-          Material changes will be noted in the app.
+          The app links to this page from Settings → About &amp; help.
         </p>
 
         <H2>13. Contact</H2>

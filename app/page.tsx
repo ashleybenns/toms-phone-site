@@ -16,7 +16,7 @@ const FEATURES = [
   },
   {
     title: "An SOS button",
-    body: "A large emergency button that calls whoever you choose — 999, a neighbour, or your own mobile. It asks for confirmation first, so it cannot go off in a pocket, and it can text the people you pick to tell them it happened.",
+    body: "A large emergency button that calls the emergency services — 999 here, or the local number abroad. It asks for confirmation first, so it cannot go off in a pocket, and it can text the people you pick to tell them it happened.",
   },
   {
     title: "Missed calls that get returned",

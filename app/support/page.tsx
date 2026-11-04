@@ -27,7 +27,7 @@ const FAQS = [
   },
   {
     q: "Does the SOS button call 999 straight away?",
-    a: "Only if you set it to. It always asks for confirmation first so it cannot fire in a pocket, and you choose what it dials — 999, your own mobile, a neighbour, or the surgery. It can also text the people you pick to tell them it happened. There is a test mode so you can try the whole thing without calling anyone real — it does still send those texts, clearly marked as a test, so warn whoever is on the list first.",
+    a: "Only once you have made it live. It always asks for confirmation first so it cannot fire in a pocket. What it dials is the emergency services — the regional number, 999 or 112, or a number you enter only if the SIM supplies none. It is not a shortcut to a neighbour or the surgery: the person pressing it may be reporting someone else's emergency, or a fire. It can also text the people you pick to tell them it happened. Until you make it live it is in test mode and calls nobody, and you can test the real call with your own mobile as the number — both still send those texts, so warn whoever is on the list first.",
   },
   {
     q: "Will I know if something is wrong?",
@@ -80,7 +80,10 @@ const SECTIONS: [string, string][] = [
     "Text size, colours, screen power, margins, and the tap test.",
   ],
   ["Admin", "Helper PIN, backing up, and stopping Tom's Phone."],
-  ["About & help", "Website, feedback, privacy policy, and subscription."],
+  [
+    "About & help",
+    "Guides, feedback, privacy policy, crash reports, and buying Tom's Phone.",
+  ],
 ];
 
 const STEPS = [
@@ -102,7 +105,7 @@ const STEPS = [
   },
   {
     title: "Set up the SOS button",
-    body: "Choose what it calls and who gets a text. Then use the test mode and watch them try it, because a button nobody has ever pressed is not a safety feature.",
+    body: "Check what it calls — the emergency services, normally the regional number — and choose who gets a text. Then use the test mode and watch them try it, because a button nobody has ever pressed is not a safety feature.",
   },
   {
     title: "Fill in the medical information",
