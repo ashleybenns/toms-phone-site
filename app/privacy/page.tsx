@@ -19,7 +19,7 @@ export const metadata: Metadata = {
  * change. Do not edit this page to describe a behaviour the app does not have.
  */
 
-const EFFECTIVE_DATE = "4 November 2026";
+const EFFECTIVE_DATE = "13 November 2026";
 
 const PERMISSIONS = [
   ["Phone / place calls", "To make a call when a button is pressed."],
@@ -186,10 +186,14 @@ export default function PrivacyPage() {
             up data credit can stop calls and texts working.
           </li>
           <li>
-            A report contains what went wrong and what type of phone it is.{" "}
+            A report contains what went wrong, what type of phone it is, and a
+            random identifier for this installation of the app, so that we can
+            tell how many phones a fault affects. The identifier is made by the
+            app itself; it is not your phone's serial number, your number, or
+            any account, and a fresh one is made if the app is reinstalled.{" "}
             <strong>
-              It never contains names, phone numbers, messages, contacts, medical
-              information, or the photograph.
+              A report never contains names, phone numbers, messages, contacts,
+              medical information, or the photograph.
             </strong>
           </li>
           <li>
