@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "Can they still get out of it and into the normal phone?",
-    a: "Not by accident, which is the point. Tom's Phone becomes the home screen, so pressing Home comes back to it. Getting to the helper settings needs a long, deliberate sideways slide along the top line — not something a wandering finger finds. You can add a PIN on top of that if they are the exploring sort.",
+    a: "Not by accident, which is the point. Tom's Phone becomes the home screen: any list or keypad has a big Back button, and a phone put down comes back to the home screen by itself. Getting to the helper settings needs a long, deliberate sideways slide along the top line — not something a wandering finger finds. You can add a PIN on top of that if they are the exploring sort.",
   },
   {
     q: "What happens when somebody rings who is not in the contacts?",
@@ -31,7 +31,7 @@ const FAQS = [
   },
   {
     q: "Will I know if something is wrong?",
-    a: "You can be texted when the battery is low and again when it is back on charge — the most common reason a phone quietly stops working. Missed calls are not texted to you. What happens instead is at their end: if you have a button on their home screen, their phone keeps reminding them about your missed call until the two of you have actually spoken.",
+    a: "You can be texted when the battery is low (once more if it stays unplugged), when it is back on charge — the most common reason a phone quietly stops working — and when SOS is pressed or cancelled. Missed calls are not texted to you. What happens instead is at their end: if you have a button on their home screen and have turned the reminder on, their phone keeps reminding them about your missed call until a call between you connects (reaching voicemail counts; the phone cannot tell the difference).",
   },
   {
     q: "I have forgotten the helper PIN.",
@@ -86,7 +86,7 @@ const SECTIONS: [string, string][] = [
 const STEPS = [
   {
     title: "Install it and open it",
-    body: "Get Tom's Phone from Google Play on the phone the senior will use. It opens into a short setup rather than straight into the finished screen.",
+    body: "Get Tom's Phone from Google Play on the phone the person will use. It opens into a short setup rather than straight into the finished screen.",
   },
   {
     title: "Put their name in",
@@ -210,7 +210,7 @@ export default function SupportPage() {
               phone is meant to be usable the instant it is picked up, and there
               is a specific reason beyond convenience: with any lock set, the
               lock screen reappears in front of the home screen when a call ends
-              or the screen wakes. The senior has to get past it before they can
+              or the screen wakes. The person has to get past it before they can
               do anything. With no lock there is nothing in the way. That is a
               fair trade on a dedicated phone with nothing private on it, which
               is the only phone this is meant for. Tom&apos;s Phone advises this
@@ -309,7 +309,7 @@ export default function SupportPage() {
           <p className="mt-3 mb-0 text-muted">
             The phone now behaves like an ordinary phone again, and Tom&apos;s
             Phone appears in the app list like any other app. Open it from there
-            and try the slide once more, unhurried, with no risk of the senior
+            and try the slide once more, unhurried, with no risk of the person
             watching over your shoulder. Nothing is lost — your contacts and
             setup are exactly as you left them, and you can set it back as the
             Home app when you are done.
