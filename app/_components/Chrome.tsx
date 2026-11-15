@@ -58,6 +58,10 @@ export function SiteFooter() {
             Privacy policy
           </Link>
           {" · "}
+          <Link href="/terms" className="text-brand no-underline">
+            Terms
+          </Link>
+          {" · "}
           <Link href="/support" className="text-brand no-underline">
             Help &amp; support
           </Link>
