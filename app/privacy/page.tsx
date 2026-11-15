@@ -189,7 +189,7 @@ export default function PrivacyPage() {
             A report contains what went wrong, what type of phone it is, and a
             random identifier for this installation of the app, so that we can
             tell how many phones a fault affects. The identifier is made by the
-            app itself; it is not your phone's serial number, your number, or
+            app itself; it is not your phone&apos;s serial number, your number, or
             any account, and a fresh one is made if the app is reinstalled.{" "}
             <strong>
               A report never contains names, phone numbers, messages, contacts,
