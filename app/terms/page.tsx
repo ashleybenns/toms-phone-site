@@ -109,8 +109,10 @@ export default function TermsPage() {
 
         <H2>5. Paying, cancelling and refunds</H2>
         <p>
-          Payment is taken by <strong>Google Play</strong>, under Google
-          Play&apos;s own terms, and we never see your card details. A monthly
+          Google Play sells the app to you on our behalf: for purchases in the
+          UK, <strong>Google is the merchant of record</strong>, acting as our
+          agent. Payment is taken by Google Play, under Google Play&apos;s own
+          terms, and we never see your card details. A monthly
           plan is cancelled in Google Play — in the app, Settings ▸ About &amp;
           help ▸ Manage subscription takes you there, or go to
           play.google.com/store/account/subscriptions — and it runs to the end
