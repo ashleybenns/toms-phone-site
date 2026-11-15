@@ -64,25 +64,22 @@ const SECTIONS: [string, string][] = [
   ["Start here", "Name, making this the Home and Phone app, and allowing calls."],
   [
     "Device setup",
-    "Wi-Fi, screen lock, brightness and timeout — set on the phone itself, and easier before Tom's Phone becomes the Home app.",
+    "The phone's own settings that matter: screen lock, SIM PIN, brightness, navigation, assistant, notifications, battery. Advice only — Tom's Phone changes none of them.",
   ],
-  [
-    "People & buttons",
-    "Contacts, and which of them get a button on the home screen.",
-  ],
-  ["Safety", "SOS emergency button, medical information, and battery alerts."],
+  ["People & buttons", "Contacts, and which of them get a button on the home screen."],
+  ["Safety", "SOS emergency button and its test call, medical information, and battery alerts."],
   [
     "Calls & voicemail",
-    "How calls sound and behave, voicemail, and recent calls.",
+    "Ring and call volume, spoken prompts, missed-call reminders, blocking unknown callers, voicemail, and recent calls.",
   ],
   [
     "Screen & touch",
-    "Text size, colours, screen power, margins, and the tap test.",
+    "Text size, bold and colours, the time, screen power, no-touch margins, tap test and tap feedback.",
   ],
-  ["Admin", "Helper PIN, backing up, and stopping Tom's Phone."],
+  ["Admin", "Helper PIN, back up and restore, Exit app, and Reset Tom's Phone."],
   [
     "About & help",
-    "Guides, feedback, privacy policy, crash reports, and buying Tom's Phone.",
+    "How to get back to these settings, guides, feedback, privacy policy, crash reports, and buying Tom's Phone.",
   ],
 ];
 
