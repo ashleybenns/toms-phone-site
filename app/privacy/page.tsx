@@ -19,7 +19,7 @@ export const metadata: Metadata = {
  * change. Do not edit this page to describe a behaviour the app does not have.
  */
 
-const EFFECTIVE_DATE = "13 November 2026";
+const EFFECTIVE_DATE = "15 November 2026";
 
 const PERMISSIONS = [
   ["Phone / place calls", "To make a call when a button is pressed."],
@@ -85,7 +85,7 @@ export default function PrivacyPage() {
           Tom&apos;s Phone is an Android app that turns a phone into a simple,
           large-button phone for someone who finds an ordinary smartphone
           difficult. It is set up by a <strong>helper</strong> — usually a family
-          member — on a phone the senior then uses.
+          member — on a phone the person they look after then uses.
         </p>
         <p>
           Contact:{" "}
@@ -108,7 +108,7 @@ export default function PrivacyPage() {
             it has no permission to, and that was a deliberate design decision.
           </li>
           <li>
-            <strong>Settings</strong> — the senior&apos;s name, button layout,
+            <strong>Settings</strong> — the name of the person using the phone, button layout,
             text size, margins, volume, and the rest.
           </li>
           <li>
@@ -126,7 +126,7 @@ export default function PrivacyPage() {
 
         <H2>3. The photograph</H2>
         <p>
-          The medical card can include a photo of the person the phone is for.
+          The medical information can include a photo of the person the phone is for.
         </p>
         <p>
           The app <strong>does not have camera permission</strong>. When the
@@ -259,8 +259,8 @@ export default function PrivacyPage() {
         <p>
           Tom&apos;s Phone is designed to be set as the phone&apos;s{" "}
           <strong>default Phone app</strong> and{" "}
-          <strong>default Home app</strong>. That is what stops the senior
-          reaching confusing screens. It gives the app no additional access to
+          <strong>default Home app</strong>. That is what keeps the person
+          using the phone on its one screen. It gives the app no additional access to
           personal data beyond the permissions above, and it can be undone at any
           time in Android settings.
         </p>
