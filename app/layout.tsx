@@ -16,18 +16,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.toms-phone.com"),
   title: {
-    default: "Tom's Phone — a simpler phone for someone who finds one hard",
+    default: "Tom's Phone — their whole phone: a few names, and SOS",
     template: "%s | Tom's Phone",
   },
   description:
-    "Tom's Phone turns an Android phone into a large-button phone with a few named people, an SOS button, and no way to get lost. Set up by a family helper.",
+    "One-tap calling and an SOS button for someone you look after. You set it up. Tom's Phone turns an ordinary Android phone into a dedicated phone: a few large named buttons, an SOS button, and nothing to wander into.",
   openGraph: {
     type: "website",
     siteName: "Tom's Phone",
     url: "https://www.toms-phone.com",
-    title: "Tom's Phone — a simpler phone for someone who finds one hard",
+    title: "Tom's Phone — their whole phone: a few names, and SOS",
     description:
-      "Big named buttons, an SOS button, and nothing to get lost in. Set up by a family helper.",
+      "One-tap calling and an SOS button for someone you look after. You set it up.",
+    images: ["/screenshots/feature_graphic_1024x500.png"],
   },
 };
 

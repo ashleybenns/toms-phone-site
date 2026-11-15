@@ -1,38 +1,116 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Card, Container, H2, Hero } from "./_components/Chrome";
 
 /**
- * The introduction.
+ * The home page — a brochure.
  *
- * Written for the person who buys and sets it up — an adult child or other family helper — not for
- * the senior, who never sees this page. So it answers their questions in their order: what is it,
- * will it actually help, what does it cost, what do I have to do.
+ * Written for the person who buys and sets it up (an adult child or other family helper), never
+ * for the person who will use the phone. It is cut from the Play listing, which is cut from the
+ * short spec, which is cut from AGENTS.md (TP_June26: planning/BRAND_VOICE.md §8), in that order,
+ * so a claim appears here only if it appears there. The order of claims is the ranked USP list
+ * (planning/USPS.md); the screenshots carry USP #2 — the same phone set up several ways — so the
+ * page need not say "configurable" in words. Re-cut 2026-11-15.
  */
 
-const FEATURES = [
+const PLAY_URL =
+  "https://play.google.com/store/apps/details?id=com.ashbashapps.tomsphone";
+
+/** The eight listing screenshots (TP_June26 art/play_listing/phone), with the USP captions. */
+const SHOTS = [
   {
-    title: "A few big buttons, with names on",
-    body: "The home screen shows the people who matter, by name, in letters large enough to read without glasses. One press calls them. There is no scrolling, no app drawer, and nothing else to press by mistake.",
+    src: "/screenshots/01_home_one_button.png",
+    alt: "Mary's Phone: one large blue button reading Sarah, and a red SOS 999 button",
+    caption: "One big button, if that is all they need.",
   },
   {
-    title: "An SOS button",
-    body: "A large emergency button that calls the emergency services — 999 here, or the local number abroad. It asks for confirmation first, so it cannot go off in a pocket, and it can text the people you pick to tell them it happened.",
+    src: "/screenshots/02_home_standby.png",
+    alt: "Mary's Phone: buttons for Sarah, David and Doctor, a No Missed Calls button, and SOS 999",
+    caption: "Their people, by name. One press calls.",
   },
   {
-    title: "Missed calls that get returned",
-    body: "A missed call shows as a name, not a number, and stays until it has been dealt with. If the missed call was yours, and you have a button on their home screen, their phone can keep gently reminding them until the two of you have actually spoken.",
+    src: "/screenshots/03_home_full.png",
+    alt: "Mary's Phone with the time, four named buttons, No Missed Calls, Contacts, Keypad, Voicemail and SOS 999",
+    caption: "As full as they can manage: people, missed calls, contacts, a keypad, voicemail, the time.",
   },
   {
-    title: "Nowhere to get lost",
-    body: "Tom's Phone becomes the phone's home screen, so pressing Home always comes back here. The app drawer and the other apps are out of the way — not hidden as a trick, just not in the way. The notification shade still pulls down, which is how you reach the phone's own settings.",
+    src: "/screenshots/04_missed_call_sarah.png",
+    alt: "The status reads Missed call from Sarah and the missed-call button reads Sarah",
+    caption: "A missed call shows who rang, by name, and one press returns it.",
   },
   {
-    title: "Emergency medical information",
-    body: "Allergies, medications, conditions and who to contact, held on the phone and openable without a PIN from the SOS and call screens. Set up the phone's own emergency information as well — that is where ambulance crews look first. It never leaves the phone.",
+    src: "/screenshots/06_incoming_call.png",
+    alt: "Sarah is calling, with a green Answer button and a red Decline button",
+    caption: "Who is calling, in words they can read.",
   },
   {
-    title: "Set up by you, not by them",
-    body: "Everything is configured in a helper area reached by a deliberate gesture, optionally behind a PIN. You choose the buttons, the colours, the text size, and what SOS does.",
+    src: "/screenshots/05_sos_confirm_test.png",
+    alt: "The SOS confirmation screen in test mode: a banner saying no real call will be made, Press 2 times, a TEST button and a Medical button",
+    caption: "SOS calls the emergency services. It starts in test.",
+  },
+  {
+    src: "/screenshots/07_layout_preview.png",
+    alt: "The helper's Home screen buttons page, with a live preview of Mary's screen",
+    caption: "You decide, with a preview of their screen as you go.",
+  },
+  {
+    src: "/screenshots/08_settings_hub.png",
+    alt: "The Helper settings page: Start here, Device setup, People & buttons, Safety",
+    caption: "A settings area the person is not shown.",
+  },
+];
+
+const FOR_THEM = [
+  {
+    title: "One press calls a person",
+    body: "Big, text-only buttons with the names of the people they call, in colours you choose. There is no app drawer, no settings icon and nothing to wander into; any list or keypad has a big Back button, and a phone put down comes back to that screen by itself.",
+  },
+  {
+    title: "The ring says their name",
+    body: "The phone rings with its own ringtone and says their name — “Mary, that’s your phone ringing.” It can say who is calling too. An unknown number is never read out.",
+  },
+  {
+    title: "A missed call is not forgotten",
+    body: "If they miss your call and you have turned the reminder on, the phone asks them by name to ring back, every 1½, 5 or 10 minutes, until a call between you connects. A missed-call button, if you add one, shows who rang and returns the call with one press.",
+  },
+  {
+    title: "SOS calls the emergency services",
+    body: "Police, fire or ambulance, after a confirmation of one, two or three taps, so it is hard to set off by accident. It starts in test mode and makes no call until you make it live; a test call lets you rehearse it first.",
+  },
+  {
+    title: "Medical information for whoever comes to help",
+    body: "Allergies, medications, conditions, where a ReSPECT or DNACPR form is kept, who to contact — a one-second hold away on the SOS call screen, with no PIN in the way.",
+  },
+  {
+    title: "Loud — and the battery speaks for itself",
+    body: "Calls start on the loudspeaker and stay loud; the volume keys cannot silence the phone by accident. When the battery is low, the phone asks them by name to plug it in, and says so when it is charging again.",
+  },
+];
+
+const FOR_YOU = [
+  {
+    title: "Texts, only when something needs you",
+    body: "Texts to the people you opt in, one at a time: when the battery is low (once more if it stays unplugged), when it is back on charge, and when SOS is pressed or cancelled. Nothing else is texted unless you ask for it.",
+  },
+  {
+    title: "As simple or as full as they can manage",
+    body: "Their screen can be one big call button or up to nine — people, a missed-call button and the extras. You decide, with a preview of their screen as you go.",
+  },
+  {
+    title: "A settings area they are not shown",
+    body: "Reached by a gesture you know and they do not. Lock it with a PIN if you like.",
+  },
+  {
+    title: "Block unknown callers",
+    body: "Off unless you turn it on: then only saved contacts and voicemail can ring. Blocking pauses for 48 hours after any emergency call, so the services can ring back.",
+  },
+  {
+    title: "Advice on the phone’s own settings",
+    body: "Screen lock, SIM PIN, notifications, battery saving and the rest, with the menu paths. Tom’s Phone changes none of them.",
+  },
+  {
+    title: "Back up and restore",
+    body: "Save the setup to a file and restore it on a new phone. The medical information and the PIN stay on the phone they were typed into.",
   },
 ];
 
@@ -41,48 +119,62 @@ export default function HomePage() {
     <Container>
       <Hero
         eyebrow="For Android phones"
-        title="A phone that stays simple, for someone who finds one hard"
+        title="Their whole phone: a few names, and SOS."
       >
         <p className="m-0 text-lg">
-          Tom&apos;s Phone turns an ordinary Android phone into a large-button
-          phone showing a few named people, an SOS button, and nothing else to
-          get lost in. You set it up; they just use it.
+          Tom&apos;s Phone turns an ordinary Android phone into a dedicated
+          phone for an older or vulnerable person, set up and looked after by
+          you. Their whole phone becomes one screen: their name at the top, a
+          few large buttons with the names of the people they call, and an SOS
+          button. Pressing a name makes the call.
         </p>
         <p className="mt-5 mb-0 flex flex-wrap gap-3">
-          <Link
-            href="/support"
+          <a
+            href={PLAY_URL}
             className="inline-block rounded-xl bg-brand px-5 py-3 font-semibold text-white no-underline hover:bg-brand-dark"
           >
-            How to set it up
-          </Link>
+            Get it on Google Play
+          </a>
           <Link
-            href="/support#faq"
+            href="/support"
             className="inline-block rounded-xl border border-line bg-card px-5 py-3 font-semibold text-brand no-underline hover:border-brand"
           >
-            Common questions
+            How to set it up
           </Link>
         </p>
       </Hero>
 
       <Card>
-        <H2>Who it is for</H2>
-        <p>
-          Someone who used to manage a phone and now finds a smartphone
-          bewildering — through failing eyesight, arthritis, a stroke, dementia,
-          or simply never having got on with it. They can still hold a
-          conversation and still want to call their family. The phone is the
-          part that stopped working.
+        <H2>One phone, set up several ways</H2>
+        <p className="text-muted">
+          The same phone, as simple or as full as the person can manage. You
+          choose the people, the colours, the order and the number of buttons.
         </p>
-        <p className="mb-0">
-          And it is for the person looking after them, who is tired of hearing{" "}
-          <em>&ldquo;I pressed something and now it won&apos;t work.&rdquo;</em>
-        </p>
+        <ul className="m-0 grid list-none grid-cols-2 gap-4 p-0 sm:grid-cols-4">
+          {SHOTS.map((s) => (
+            <li key={s.src} className="m-0">
+              <figure className="m-0">
+                <Image
+                  src={s.src}
+                  alt={s.alt}
+                  width={1170}
+                  height={2340}
+                  sizes="(min-width: 640px) 200px, 45vw"
+                  className="h-auto w-full rounded-2xl border border-line"
+                />
+                <figcaption className="mt-2 text-sm text-muted">
+                  {s.caption}
+                </figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
       </Card>
 
       <Card>
-        <H2>What it does</H2>
+        <H2>For the person using it</H2>
         <div className="grid gap-6 sm:grid-cols-2">
-          {FEATURES.map((f) => (
+          {FOR_THEM.map((f) => (
             <div key={f.title}>
               <h3 className="mt-0 mb-1.5 font-bold">{f.title}</h3>
               <p className="m-0 text-muted">{f.body}</p>
@@ -92,42 +184,86 @@ export default function HomePage() {
       </Card>
 
       <Card>
-        <H2>What it costs</H2>
+        <H2>For you, the helper</H2>
+        <div className="grid gap-6 sm:grid-cols-2">
+          {FOR_YOU.map((f) => (
+            <div key={f.title}>
+              <h3 className="mt-0 mb-1.5 font-bold">{f.title}</h3>
+              <p className="m-0 text-muted">{f.body}</p>
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      <Card>
+        <H2>What it does not do</H2>
         <p>
-          Free to try for a month, with everything working. After that it is{" "}
-          <strong>£1 a month</strong>, or <strong>£20 once</strong> if you would
-          rather not think about it again. It can only be bought in the UK at the
-          moment; elsewhere the settings simply stay unlocked.
+          No ads. No analytics. No account to create. It works without
+          internet; only buying it needs a connection. It is not a personal
+          alarm or a telecare service, it does not know where the phone is, and
+          nobody is watching.
         </p>
-        <p>
-          Buy it on the phone they will actually use, signed in to whatever
-          Google account that phone uses — a purchase belongs to an account
-          rather than to a handset.
-        </p>
-        <p className="mb-0 rounded-2xl bg-wash p-5">
-          <strong>The phone never stops working if you stop paying.</strong>{" "}
-          Calls, the SOS button, missed calls and everything the senior touches
-          keep going regardless. What locks is the helper&apos;s settings area —
-          so you cannot make changes until it is bought, but nobody is ever left
-          unable to call for help over a subscription. You can always take a
-          backup of your setup, reset the app, or stop using it.
+        <p className="mb-0">
+          It never reads the phone&apos;s own address book; the contacts are the
+          ones you type in. Names, numbers and the medical information stay on
+          the phone. Apart from the texts you set up, the only thing that ever
+          leaves it is an optional crash report, sent only on a connection that
+          does not charge for data, and you can switch that off. The{" "}
+          <Link href="/privacy" className="text-brand">
+            privacy policy
+          </Link>{" "}
+          says all of this in full.
         </p>
       </Card>
 
       <Card>
-        <H2>What you need</H2>
-        <ul className="mb-0 list-disc pl-5">
-          <li>
-            An Android phone, roughly 2018 or newer (Android 9 and above). Not
-            an iPhone — Apple does not allow an app to replace the home screen
-            and dialler this way.
-          </li>
-          <li>A SIM with a normal call and text allowance.</li>
-          <li>
-            About twenty minutes to set it up, ideally with the phone in front
-            of you.
-          </li>
-        </ul>
+        <H2>Who it is for</H2>
+        <p>
+          Someone who used to manage a phone and now finds a smartphone
+          bewildering &mdash; poor eyesight, shaky hands, a memory that comes
+          and goes, or simply never having got on with it. They can still hold
+          a conversation and still want to call their family. The phone is the
+          part that stopped working.
+        </p>
+        <p className="mb-0">
+          And it is for the person looking after them, who is tired of hearing{" "}
+          <em>&ldquo;I pressed something and now it won&apos;t work.&rdquo;</em>
+        </p>
+      </Card>
+
+      <Card>
+        <H2>Setting it up</H2>
+        <p>
+          Any Android phone from Android 9 (2018 or so) will do &mdash; probably
+          one you already have. It is Android only. The phone needs a SIM with
+          a normal call and text allowance.
+        </p>
+        <p className="mb-0">
+          Tom&apos;s Phone must be set as the phone&apos;s default Phone app and
+          default Home app; the Start here page in its settings walks you
+          through both. That is what gives the person their one screen, and it
+          can be undone at any time. The{" "}
+          <Link href="/support" className="text-brand">
+            setup guide
+          </Link>{" "}
+          takes it step by step, with the phone in front of you.
+        </p>
+      </Card>
+
+      <Card>
+        <H2>Price</H2>
+        <p>
+          Free for 30 days from first use, with nothing to enter. After that,
+          buying it lets you keep changing the settings:{" "}
+          <strong>&pound;20 once</strong>, or <strong>&pound;1 a month</strong>,
+          through Google Play. Available in the UK.
+        </p>
+        <p className="mb-0 rounded-2xl bg-wash p-5">
+          <strong>The phone keeps working either way.</strong> Calls, the SOS
+          button and missed-call reminders are never affected. What locks is
+          the helper&apos;s settings area; backing up, resetting and Exit app
+          are never locked.
+        </p>
       </Card>
     </Container>
   );
