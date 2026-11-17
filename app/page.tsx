@@ -21,6 +21,14 @@ import { Card, Container, H2, Hero } from "./_components/Chrome";
 const PLAY_URL =
   "https://play.google.com/store/apps/details?id=com.ashbashapps.tomsphone";
 
+/**
+ * false until Tom's Phone 2.0 is live on Google Play. Set 2026-11-17: the Play page above returned
+ * 404 while the developer account moved to an organisation account. While false, the hero shows
+ * "Coming soon to Google Play" with no link. Set it to true when the listing is live; that is a
+ * line in TP_June26 planning/PROPAGATION.md §7 "When the app goes live on Google Play".
+ */
+const PLAY_LIVE = false;
+
 /** The eight listing screenshots (TP_June26 art/play_listing/phone), with the USP captions. */
 const SHOTS = [
   {
@@ -136,12 +144,18 @@ export default function HomePage() {
           You set it up and look after it. They just use it.
         </p>
         <p className="mt-5 mb-0 flex flex-wrap gap-3">
-          <a
-            href={PLAY_URL}
-            className="inline-block rounded-xl bg-brand px-5 py-3 font-semibold text-white no-underline hover:bg-brand-dark"
-          >
-            Get it on Google Play
-          </a>
+          {PLAY_LIVE ? (
+            <a
+              href={PLAY_URL}
+              className="inline-block rounded-xl bg-brand px-5 py-3 font-semibold text-white no-underline hover:bg-brand-dark"
+            >
+              Get it on Google Play
+            </a>
+          ) : (
+            <span className="inline-block rounded-xl border border-brand bg-card px-5 py-3 font-semibold text-brand">
+              Coming soon to Google Play
+            </span>
+          )}
           <Link
             href="/support"
             className="inline-block rounded-xl border border-line bg-card px-5 py-3 font-semibold text-brand no-underline hover:border-brand"
