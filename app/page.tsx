@@ -237,14 +237,18 @@ export default function HomePage() {
       <Card>
         <H2>Who it is for</H2>
         <p>
-          Someone who used to manage a phone and now finds a smartphone too
-          much. They can still hold a conversation and still want to call
-          their family. The phone is the part that stopped working. Families
-          set it up for:
+          Someone who finds a smartphone too much, whether they used to manage
+          one or never could. They can still hold a conversation and still
+          want to call their family; the phone is the part that gets in the
+          way. Families set it up for:
         </p>
         <ul className="mt-0 mb-4 list-disc pl-5">
           <li>a parent whose eyesight or hands aren&apos;t what they were</li>
           <li>someone whose memory comes and goes</li>
+          <li>
+            an adult with a learning disability who wants to call family on
+            their own
+          </li>
           <li>
             someone who holds a phone their own way, or rests a finger on the
             screen without meaning to
