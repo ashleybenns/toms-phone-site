@@ -193,8 +193,8 @@ export default function HomePage() {
       <Card id="story">
         <H2>Why I made it</H2>
         <p>
-          I built the first Tom&apos;s Phone for my mum when she was 96. She
-          had tried phones made for older people and couldn&apos;t learn
+          I built the first Tom&apos;s Phone for my mum, Wanda, when she was
+          96. She had tried phones made for older people and couldn&apos;t learn
           another one. She needed to make and answer a call with one tap,
           however tired or confused she was.
         </p>
