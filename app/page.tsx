@@ -223,6 +223,15 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        <p className="mt-6 mb-0">
+          That&apos;s the short version. Margins for a hand that curls round the
+          phone, a press that counts after a held touch, and every other
+          setting are in{" "}
+          <Link href="/features" className="text-brand">
+            everything it does
+          </Link>
+          .
+        </p>
       </Card>
 
       <Card>
