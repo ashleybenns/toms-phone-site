@@ -11,6 +11,11 @@ import { Card, Container, H2, Hero } from "./_components/Chrome";
  * so a claim appears here only if it appears there. The order of claims is the ranked USP list
  * (planning/USPS.md); the screenshots carry USP #2 — the same phone set up several ways — so the
  * page need not say "configurable" in words. Re-cut 2026-11-15.
+ *
+ * 2026-11-17 (BRAND_VOICE.md §1, §2, §8): the new tag line; "Why I made it", Ashley's origin story
+ * in the first person (its facts match AGENTS.md §28; it is not on the Play listing); who it is for
+ * and who it isn't for; and the invitation to say what would help. Section order is BRAND_VOICE §8,
+ * item 4.
  */
 
 const PLAY_URL =
@@ -118,15 +123,17 @@ export default function HomePage() {
   return (
     <Container>
       <Hero
-        eyebrow="For Android phones"
-        title="Their whole phone: a few names, and SOS."
+        eyebrow="A big-button phone for Android"
+        title="Nothing to learn. Nothing to remember."
       >
         <p className="m-0 text-lg">
-          Tom&apos;s Phone turns an ordinary Android phone into a dedicated
-          phone for an older or vulnerable person, set up and looked after by
-          you. Their whole phone becomes one screen: their name at the top, a
-          few large buttons with the names of the people they call, and an SOS
-          button. Pressing a name makes the call.
+          Tom&apos;s Phone turns an ordinary Android phone into one simple
+          screen for someone a smartphone has become too much for: their name
+          at the top, a few big buttons with the names of the people they
+          call, and an SOS button. They press a name, and it calls.
+        </p>
+        <p className="mt-3 mb-0 text-lg">
+          You set it up and look after it. They just use it.
         </p>
         <p className="mt-5 mb-0 flex flex-wrap gap-3">
           <a
@@ -183,6 +190,29 @@ export default function HomePage() {
         </div>
       </Card>
 
+      <Card id="story">
+        <H2>Why I made it</H2>
+        <p>
+          I built the first Tom&apos;s Phone for my mum when she was 96. She
+          had tried phones made for older people and couldn&apos;t learn
+          another one. She needed to make and answer a call with one tap,
+          however tired or confused she was.
+        </p>
+        <p>
+          What I didn&apos;t expect was how much the missed-call reminder would
+          matter. If Mum missed my call because she was asleep or in another
+          room, her phone told her, by name, to ring me back, and kept telling
+          her until she did. I no longer had to keep ringing back. And a text
+          when her phone went back on charge told me the battery hadn&apos;t
+          died. I found that very reassuring.
+        </p>
+        <p>
+          Every family is different, so I rebuilt it for anyone to set up for
+          the person they look after, as simple or as full as they can manage.
+        </p>
+        <p className="mb-0 font-semibold">Ashley</p>
+      </Card>
+
       <Card>
         <H2>For you, the helper</H2>
         <div className="grid gap-6 sm:grid-cols-2">
@@ -193,6 +223,35 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+      </Card>
+
+      <Card>
+        <H2>Who it is for</H2>
+        <p>
+          Someone who used to manage a phone and now finds a smartphone too
+          much. They can still hold a conversation and still want to call
+          their family. The phone is the part that stopped working. Families
+          set it up for:
+        </p>
+        <ul className="mt-0 mb-4 list-disc pl-5">
+          <li>a parent whose eyesight or hands aren&apos;t what they were</li>
+          <li>someone whose memory comes and goes</li>
+          <li>
+            someone who holds a phone their own way, or rests a finger on the
+            screen without meaning to
+          </li>
+          <li>someone who has never got on with a smartphone</li>
+        </ul>
+        <p>
+          And it is for the person looking after them, who is tired of hearing{" "}
+          <em>&ldquo;I pressed something and now it won&apos;t work.&rdquo;</em>
+        </p>
+        <h3 className="mt-6 mb-1.5 font-bold">Who it isn&apos;t for</h3>
+        <p className="mb-0">
+          If they can already open and use other apps reliably, they don&apos;t
+          need Tom&apos;s Phone. It is a phone for calls: no texts, no internet,
+          no other apps. That is on purpose.
+        </p>
       </Card>
 
       <Card>
@@ -213,21 +272,6 @@ export default function HomePage() {
             privacy policy
           </Link>{" "}
           says all of this in full.
-        </p>
-      </Card>
-
-      <Card>
-        <H2>Who it is for</H2>
-        <p>
-          Someone who used to manage a phone and now finds a smartphone
-          bewildering &mdash; poor eyesight, shaky hands, a memory that comes
-          and goes, or simply never having got on with it. They can still hold
-          a conversation and still want to call their family. The phone is the
-          part that stopped working.
-        </p>
-        <p className="mb-0">
-          And it is for the person looking after them, who is tired of hearing{" "}
-          <em>&ldquo;I pressed something and now it won&apos;t work.&rdquo;</em>
         </p>
       </Card>
 
@@ -263,6 +307,19 @@ export default function HomePage() {
           button and missed-call reminders are never affected. What locks is
           the helper&apos;s settings area; backing up, resetting and Exit app
           are never locked.
+        </p>
+      </Card>
+
+      <Card>
+        <H2>Tell me what would help</H2>
+        <p className="mb-0">
+          Tom&apos;s Phone is made by one person, and I keep changing it. If
+          something would make it work better for the person you look after,
+          write to me at{" "}
+          <a href="mailto:support@toms-phone.com" className="text-brand">
+            support@toms-phone.com
+          </a>
+          , and tell me who you set it up for.
         </p>
       </Card>
     </Container>

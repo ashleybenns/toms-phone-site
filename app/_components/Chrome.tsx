@@ -102,12 +102,16 @@ export function Hero({
 export function Card({
   children,
   className = "",
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
+  /** An anchor other pages can link to, e.g. the company site's link to /#story. */
+  id?: string;
 }) {
   return (
     <section
+      id={id}
       className={`mb-6 rounded-3xl border border-line bg-card p-7 leading-relaxed shadow-[0_12px_36px_rgba(31,22,48,0.04)] ${className}`}
     >
       {children}
