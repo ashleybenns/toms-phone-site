@@ -327,7 +327,9 @@ export default function HomePage() {
           Free for 30 days from first use, with nothing to enter. After that,
           buying it lets you keep changing the settings:{" "}
           <strong>&pound;20 once</strong>, or <strong>&pound;1 a month</strong>,
-          through Google Play. Available in the UK.
+          through Google Play. Those are the UK prices. It is also sold in
+          Ireland, the US, Canada, Australia and New Zealand, where Google
+          Play shows the price in your own currency.
         </p>
         <p className="mb-0 rounded-2xl bg-wash p-5">
           <strong>The phone keeps working either way.</strong> Calls, the SOS

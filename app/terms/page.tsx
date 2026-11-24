@@ -96,7 +96,9 @@ export default function TermsPage() {
           first use, with nothing to enter. After that, buying it keeps the
           helper&apos;s settings open: <strong>&pound;20 once</strong>, or{" "}
           <strong>&pound;1 a month</strong>, as shown on Google Play at the
-          time of purchase. It is sold in the UK only.
+          time of purchase. Those are the UK prices. It is also sold in
+          Ireland, the United States, Canada, Australia and New Zealand, at
+          the price Google Play shows there in the local currency.
         </p>
         <p>
           <strong>If you do not buy it, or stop paying, the phone keeps
