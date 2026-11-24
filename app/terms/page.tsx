@@ -115,8 +115,8 @@ export default function TermsPage() {
           UK, <strong>Google is the merchant of record</strong>, acting as our
           agent. Payment is taken by Google Play, under Google Play&apos;s own
           terms, and we never see your card details. A monthly
-          plan is cancelled in Google Play — in the app, Settings ▸ About &amp;
-          help ▸ Manage subscription takes you there, or go to
+          plan is cancelled in Google Play — in the app, Settings ▸ Trial &amp;
+          purchase ▸ Manage subscription takes you there, or go to
           play.google.com/store/account/subscriptions — and it runs to the end
           of the month already paid for. Refund requests also go through Google
           Play; your statutory rights as a consumer, including your rights if

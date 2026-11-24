@@ -52,7 +52,7 @@ const FAQS = [
 ];
 
 /**
- * The eight helper-settings sections, with the app's OWN summaries copied verbatim from
+ * The nine helper-settings sections, with the app's OWN summaries copied verbatim from
  * app/src/main/res/values/strings.xml (settings_section_*_summary) in the TP_June26 repo.
  *
  * Kept word-for-word on purpose. A helper reads this with the phone in the other hand, so a
@@ -76,10 +76,14 @@ const SECTIONS: [string, string][] = [
     "Screen & touch",
     "Text size, bold and colours, the time, screen power, no-touch margins, tap test and tap feedback.",
   ],
+  [
+    "Trial & purchase",
+    "The free trial, buying Tom's Phone monthly or once, and where to cancel.",
+  ],
   ["Admin", "Helper PIN, back up and restore, Exit app, and Reset Tom's Phone."],
   [
     "About & help",
-    "How to get back to these settings, guides, feedback, privacy policy, crash reports, and buying Tom's Phone.",
+    "How to get back to these settings, guides, feedback, privacy policy, and crash reports.",
   ],
 ];
 
