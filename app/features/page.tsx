@@ -68,7 +68,7 @@ const SECTIONS: Section[] = [
       },
       {
         title: "Missed calls, the simple way or the full way",
-        body: "A missed-call button shows who rang, by name, and one press calls them back. Or, for someone who can read a page, a list of every missed call. Choose one, not both; the settings warn you if you choose neither. A caller who isn’t in their contacts shows as “Unknown”, never as a number, and an unknown premium-rate or international number is never offered for a call back, because some scam calls ring once hoping to be returned at a high charge.",
+        body: "A missed-call button shows who rang, by name, and one press calls them back. Or, for someone who can read a page, a list of every missed call. Choose one, not both; the settings warn you if you choose neither. A caller who isn’t in their contacts shows as “Unknown”, never as a number, and an unknown international number, or in the UK an unknown premium-rate number, is never offered for a call back, because some scam calls ring once hoping to be returned at a high charge.",
         where: "People & buttons ▸ Home screen buttons",
       },
       {
