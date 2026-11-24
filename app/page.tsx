@@ -32,14 +32,14 @@ const PLAY_LIVE = false;
 /** The eight listing screenshots (TP_June26 art/play_listing/phone), with the USP captions. */
 const SHOTS = [
   {
-    src: "/screenshots/01_home_one_button.png",
-    alt: "Mary's Phone: one large blue button reading Sarah, and a red SOS 999 button",
-    caption: "One big button, if that is all they need.",
+    src: "/screenshots/01_home_wide_margins.png",
+    alt: "Mary's Phone on a dark background: buttons for Sarah, David and Doctor, a No Missed Calls button, and SOS 999, with empty space at the edges",
+    caption: "Their people, by name. One press calls.",
   },
   {
-    src: "/screenshots/02_home_standby.png",
-    alt: "Mary's Phone: buttons for Sarah, David and Doctor, a No Missed Calls button, and SOS 999",
-    caption: "Their people, by name. One press calls.",
+    src: "/screenshots/02_home_standby_light.png",
+    alt: "The same screen on a light background: Sarah, David, Doctor, No Missed Calls and SOS 999",
+    caption: "Light or dark, whichever they see best.",
   },
   {
     src: "/screenshots/03_home_full.png",
@@ -57,9 +57,9 @@ const SHOTS = [
     caption: "Who is calling, in words they can read.",
   },
   {
-    src: "/screenshots/05_sos_confirm_test.png",
-    alt: "The SOS confirmation screen in test mode: a banner saying no real call will be made, Press 2 times, a TEST button and a Medical button",
-    caption: "SOS calls the emergency services. It starts in test.",
+    src: "/screenshots/05_sos_confirm_live.png",
+    alt: "The red SOS confirmation screen: Cancel, Call for help, Press 3 times, a Call 999 button and a Medical button",
+    caption: "SOS calls the emergency services, after a deliberate press.",
   },
   {
     src: "/screenshots/07_layout_preview.png",
