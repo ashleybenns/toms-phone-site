@@ -13,14 +13,9 @@ export const metadata: Metadata = {
  * before production, then paste the URL into the trader page). Plain words, in the house voice
  * (TP_June26 planning/BRAND_VOICE.md): what we offer, what it is not, money, what the helper
  * takes on, and nothing that tries to exclude liability for negligence — that would be void under
- * UK consumer law and read worse than nothing. Facts here must match the Play listing and the
+ * UK consumer law and read worse than nothing. Sold in six countries since 2026-11: the law is
+ * still England and Wales, and a buyer elsewhere keeps their own country's consumer rights (§10). Facts here must match the Play listing and the
  * short spec; if the app changes, this page changes with it.
- *
- * Sold in six countries since 2026-11-23, so the page no longer speaks only of UK rights (2026-11-27):
- * the "In short" box, §8 and §10 tell a buyer outside the UK that their own country's consumer law
- * and courts still apply. A choice of English law cannot take those away, and a page that implied it
- * did would mislead: EU law for Ireland, the Australian Consumer Law and New Zealand's Consumer
- * Guarantees Act all treat that as their business. Keep that wording if the country list changes.
  */
 
 const EFFECTIVE_DATE = "27 November 2026";
@@ -43,8 +38,7 @@ export default function TermsPage() {
             30 days, then &pound;20 once or &pound;1 a month; if you stop
             paying, the phone keeps working and only your settings screens
             lock. Refunds go through Google Play. Nothing here takes away the
-            rights you have as a consumer, in the UK or in the country where
-            you live.
+            rights you have as a consumer in the country where you live.
           </p>
         </div>
 
@@ -125,9 +119,11 @@ export default function TermsPage() {
           plan is cancelled in Google Play — in the app, Settings ▸ Trial &amp;
           purchase ▸ Manage subscription takes you there, or go to
           play.google.com/store/account/subscriptions — and it runs to the end
-          of the month already paid for. Refund requests also go through Google
-          Play; your statutory rights as a consumer, including your rights if
-          the app is faulty, are not affected by anything here.
+          of the month already paid for. In the other countries Google Play
+          shows who the seller is when you buy, and the same steps apply.
+          Refund requests also go through Google Play; the rights the law gives
+          you as a consumer where you live, including your rights if the app
+          is faulty, are not affected by anything here.
         </p>
 
         <H2>6. What the helper takes on</H2>
@@ -194,13 +190,13 @@ export default function TermsPage() {
           affects the consumer rights you have under UK law.
         </p>
         <p>
-          <strong>If you live outside the UK,</strong> the consumer law of the
-          country you live in still protects you. Choosing the law of England
-          and Wales does not take away any right it gives you, and you can
-          bring a claim in the courts where you live. In Australia that
-          includes the consumer guarantees of the Australian Consumer Law, and
-          in New Zealand those of the Consumer Guarantees Act 1993; nothing in
-          these terms excludes or limits them.
+          If you live in Ireland, the United States, Canada, Australia or New
+          Zealand, you keep the consumer rights that the law of your own
+          country, state or province gives you and does not let a contract
+          take away, and you can bring a claim in your local courts where that
+          law says you can. In Australia that includes the consumer guarantees
+          in the Australian Consumer Law, and in New Zealand those in the
+          Consumer Guarantees Act.
         </p>
 
         <p className="mt-8 mb-0 text-sm text-muted">

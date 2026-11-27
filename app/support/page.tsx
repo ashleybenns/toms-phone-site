@@ -98,7 +98,7 @@ const STEPS = [
   },
   {
     title: "Let it be the Home and Phone app",
-    body: "Setup offers the home screen. The dialler comes afterwards, under Start here — Set as Phone app, along with allowing calls. Both matter: the first is what stops them getting lost, the second is what lets calls use the big, simple call screen. Without them the app still runs, but it is just another app.",
+    body: "Setup asks for the Phone app first, then the Home app. Choosing the Home app takes you to the home screen, so it comes last. Both matter: the Phone app is what lets calls use the big, simple call screen, and the Home app is what stops them getting lost. Until both are set, the top of the home screen says so in red. The same two steps are under Start here in the settings, along with allowing calls.",
   },
   {
     title: "Add the people who matter",
