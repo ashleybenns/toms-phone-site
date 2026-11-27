@@ -184,9 +184,9 @@ export default function TermsPage() {
 
         <H2>10. Law</H2>
         <p>
-          These terms are governed by the law of England and Wales, and the
-          courts of England and Wales will deal with any dispute — or, if you
-          live in Scotland or Northern Ireland, the courts there. Nothing here
+          These terms are governed by the law of England and Wales. A dispute
+          can be dealt with by the courts of England and Wales or, if you live
+          in Scotland or Northern Ireland, by the courts there. Nothing here
           affects the consumer rights you have under UK law.
         </p>
         <p>
