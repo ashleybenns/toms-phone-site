@@ -15,9 +15,15 @@ export const metadata: Metadata = {
  * takes on, and nothing that tries to exclude liability for negligence — that would be void under
  * UK consumer law and read worse than nothing. Facts here must match the Play listing and the
  * short spec; if the app changes, this page changes with it.
+ *
+ * Sold in six countries since 2026-11-23, so the page no longer speaks only of UK rights (2026-11-27):
+ * the "In short" box, §8 and §10 tell a buyer outside the UK that their own country's consumer law
+ * and courts still apply. A choice of English law cannot take those away, and a page that implied it
+ * did would mislead: EU law for Ireland, the Australian Consumer Law and New Zealand's Consumer
+ * Guarantees Act all treat that as their business. Keep that wording if the country list changes.
  */
 
-const EFFECTIVE_DATE = "15 November 2026";
+const EFFECTIVE_DATE = "27 November 2026";
 
 export default function TermsPage() {
   return (
@@ -37,7 +43,8 @@ export default function TermsPage() {
             30 days, then &pound;20 once or &pound;1 a month; if you stop
             paying, the phone keeps working and only your settings screens
             lock. Refunds go through Google Play. Nothing here takes away the
-            rights you have as a consumer in the UK.
+            rights you have as a consumer, in the UK or in the country where
+            you live.
           </p>
         </div>
 
@@ -164,8 +171,8 @@ export default function TermsPage() {
           We will provide the app with reasonable care and skill, and as
           described on this site and on Google Play. Nothing in these terms
           limits our responsibility for death or personal injury caused by our
-          negligence, for fraud, or for anything else UK law does not allow us
-          to limit. Beyond that, we are not responsible for a call that does not
+          negligence, for fraud, or for anything else the law does not allow
+          us to limit, in the UK or in the country where you live. Beyond that, we are not responsible for a call that does not
           connect because of the phone, the SIM, the network or the battery,
           nor for SOS left in test, or a number never checked with the test
           call.
@@ -181,10 +188,19 @@ export default function TermsPage() {
 
         <H2>10. Law</H2>
         <p>
-          These terms are governed by the law of England and Wales, and the
-          courts of England and Wales will deal with any dispute — or, if you
-          live in Scotland or Northern Ireland, the courts there. Nothing here
+          These terms are governed by the law of England and Wales. A dispute
+          can be dealt with by the courts of England and Wales or, if you live
+          in Scotland or Northern Ireland, by the courts there. Nothing here
           affects the consumer rights you have under UK law.
+        </p>
+        <p>
+          <strong>If you live outside the UK,</strong> the consumer law of the
+          country you live in still protects you. Choosing the law of England
+          and Wales does not take away any right it gives you, and you can
+          bring a claim in the courts where you live. In Australia that
+          includes the consumer guarantees of the Australian Consumer Law, and
+          in New Zealand those of the Consumer Guarantees Act 1993; nothing in
+          these terms excludes or limits them.
         </p>
 
         <p className="mt-8 mb-0 text-sm text-muted">
